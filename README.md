@@ -43,31 +43,6 @@
 ![FigJam Basics (한국어) (Community) (1) 복사본.png](src%2Fmain%2Fresources%2Fstatic%2FFigJam%20Basics%20%28%ED%95%9C%EA%B5%AD%EC%96%B4%29%20%28Community%29%20%281%29%20%EB%B3%B5%EC%82%AC%EB%B3%B8.png)
 ### ERD
 ![Screenshot 2024-01-10 at 12.13.56 PM.png](src%2Fmain%2Fresources%2Fstatic%2FScreenshot%202024-01-10%20at%2012.13.56%20PM.png)
----
-
-## 디렉토리 구조
-
-도메인 - controller, dto, service, repository, entity,
-Global,
-Common
-
-##### RequestDto 작성 양식
-```java
-@Getter
-@NoArgsConstructor
-public RequestDto {
-  //...
-}
-```
-###### ResponseDto 작성 양식
-```java
-@Builder
-@Getter
-@AllArgsConstructor
-@NoArgsConstructor
-public ResponseDto {
-    //...
-    }
 ```
 
 ---
