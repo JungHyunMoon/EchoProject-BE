@@ -1,13 +1,3 @@
-![header](https://capsule-render.vercel.app/api?type=waving&color=timeGradient&text=SportsEcho!!&animation=twinkling&fontSize=45&fontAlignY=40&fontAlign=50&height=250)
-## 팀소개
-| 이름  | 역할  |Github|블로그|
-|-----|-----|---|---|
-| 진유록 | 팀장  |<a href="https://github.com/jinyr1128">![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)</a>|https://velog.io/@jinyr1128/
-| 정지성 | 부팀장 |<a href="https://github.com/zzzzseong">![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)</a>|https://zzzzseong.tistory.com/
-| 김지현 | 팀원|<a href="https://github.com/zomeong">![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)</a>|https://velog.io/@zo_meong/posts
-| 문정현 | 팀원|<a href="https://github.com/JungHyunMoon">![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)</a>|https://velog.io/@foqlzm12345/posts
-
-
 ---
 
 ## 프로젝트 소개
@@ -17,22 +7,21 @@
 ---
 
 ## 기술 스택
-
--  Java 17: 객체 지향 프로그래밍 언어, 안정적이고 확장 가능한 백엔드 개발을 위함
--  Spring Boot 3.2.1: 빠른 마이크로서비스 개발을 위한 Java 기반 프레임워크
--  Spring Security 6: 애플리케이션 보안 (인증 및 권한 부여)을 위한 프레임워크
--  MySQL 8.2.0: 관계형 데이터베이스 관리 시스템
--  Redis 7.2.3: 고성능 키-값 저장소
-- JPA: 자바 ORM 기술로, 객체와 관계형 데이터베이스의 매핑을 위한 프레임워크
-- Rapid API: 실시간 스포츠 데이터를 제공하는 API
-- AWS S3: 클라우드 기반 객체 스토리지 서비스
-- AWS RDS: 클라우드 기반 관계형 데이터베이스 서비스
-- AWS EC2: 클라우드 기반 가상 서버 서비스
-- AWS Route53: 클라우드 기반 DNS 서비스
+-  Java 17
+-  Spring Boot 3.2.1
+-  Spring Security 6
+-  MySQL 8.2.0
+-  Redis 7.2.3
+- JPA
+- Rapid API
+- AWS S3
+- AWS RDS
+- AWS EC2
+- AWS Route53
 
 ### DevOps
-- GitHub Actions: 지속적 통합 및 배포를 위한 워크플로우 자동화 도구
-- nGrinder/Jmeter: 성능 테스트를 위한 오픈소스 로드 테스트 도구
+- GitHub Actions
+- nGrinder
 
 ### Tools
 - IntelliJ: Java 개발을 위한 통합 개발 환경(IDE)
@@ -43,29 +32,40 @@
 ![FigJam Basics (한국어) (Community) (1) 복사본.png](src%2Fmain%2Fresources%2Fstatic%2FFigJam%20Basics%20%28%ED%95%9C%EA%B5%AD%EC%96%B4%29%20%28Community%29%20%281%29%20%EB%B3%B5%EC%82%AC%EB%B3%B8.png)
 ### ERD
 ![Screenshot 2024-01-10 at 12.13.56 PM.png](src%2Fmain%2Fresources%2Fstatic%2FScreenshot%202024-01-10%20at%2012.13.56%20PM.png)
-```
+
 
 ---
 
-## 주요 기능
+## 구현 기능
 
 ### 스포츠 경기 일정 및 결과 서비스
--  기능 설명: 사용자는 축구, 농구, 야구 경기의 일정과 결과를 확인할 수 있습니다. 이 데이터는 Rapid API를 통해 가져오며, DB에 저장됩니다.
--   데이터 업데이트: Scheduler를 활용해 15분마다 경기 결과 데이터를 업데이트합니다. 이는 Timezone 및 API 호출 제한을 고려한 결정입니다.
--   스케일 아웃: 서버의 확장성을 고려하여, 필요시 Scheduler를 별도의 서비스로 분리하여 이벤트를 처리할 수 있도록 계획하였습니다.
--   사용자 상호 작용: 각 경기 일정에 대해 사용자가 댓글을 달 수 있는 기능을 제공합니다.
-### 핫딜 및 상품 구매 서비스
--  상품 제공: 스포츠 유니폼, 사인볼, 기념품 등 다양한 상품을 판매합니다.
--   기능: 상품 검색, 리뷰 확인, 장바구니 기능을 포함합니다.
-- 특별 행사 및 할인: 사용자에게 최상의 거래를 제공하기 위해 특별 행사 및 할인 정보를 제공합니다.
--  성능 최적화: Redis Sorted Set을 사용해 대용량 트래픽 처리를 계획하고 있으며, 동시성 문제는 비관적 락을 통해 해결할 예정입니다.
-### 응원 댓글 작성 서비스
+-  기능 설명: 사용자는 축구, 농구, 야구 경기의 일정과 결과를 확인할 수 있습니다. 서비스의 토대가 되는 스포츠 경기 일정 데이터는 Rapid API 플랫폼을 채택하였습니다.
+, DB에 저장됩니다.
+-  데이터 업데이트: Scheduler를 활용해 15분마다 경기 결과 데이터를 업데이트합니다. 이는 Timezone 및 API 호출 제한을 고려한 결정입니다.
+-  스케일 아웃: 서버의 확장성을 고려하여 Scheduler를 별도의 서버로 분리하여 일정 저장 이벤트를 처리하였습니다.
+  
+### 핫딜 구매 동시성 처리
+-  핫딜 상품 : 스포츠 유니폼, 사인볼, 기념품 등 다양한 상품을 이벤트성으로 할인하여 판매합니다.
+-  비관적 락(Perssimistic Lock)을 통해 Race Condition과 같은 동시성 문제를 제어합니다.
+![image](https://github.com/JungHyunMoon/EchoProject-BE/assets/120004247/848679cb-74c5-478c-b24d-5bd184571267)
+- JPA Lcok을 통해 DataBase레벨에 Lock을 걸어 문제 상황을 핸들하고자 하였습니다.
+- 핫딜의 경우 빈번한 트랜잭션 충돌이 예상되는 상황이였기에 커밋 시점에 동시성 문제가 발생하면 그떄 대응하는 낙관적 락의 방법론 보다는 데이터 정합성을 강력하게 보장할 수 있는 비관적 락을 사용하기로 결정 하였습니다.
 
-WebSocket방식 : 사용자는 각 경기에 대해 응원 댓글을 작성할 수 있으며, 댓글은 WebSocket 방식을 통해 실시간으로 갱신됩니다.
+### 핫딜 구매 순서 보장
+- JPA 락으로도 유저의 구매 순서를 완벽하게 보장할 수 없었습니다.
+- 하단의 사진을 보면 5번째로 시작된 쓰레드의 구매 프로세스가 가장 먼저 끝난것을 확인 할 수 있었습니다
+![image](https://github.com/JungHyunMoon/EchoProject-BE/assets/120004247/41d9647e-2d46-45fd-8635-785ca022c17d)
+
+- 이에 구매 순서를 완벽히 보장하기 위해 SortedSet 자료구조를 도입하였습니다.
+![image](https://github.com/JungHyunMoon/EchoProject-BE/assets/120004247/3b102800-cf8d-4baa-895a-91c4f3a886b3)
+- 첫 번째로 시도한 방법은 Polling방식입니다.
+- 유저는 핫딜을 구매하기 이전에 대기열에 입장하여 redis에 저장합니다.
+- 클라이언트 단에서 자신의 차례인지 지속적인 요청을 보내 가장 최신의 score값을 가지고 있는 유저 10명을 구매 페이지로 redirect합니다. 
+- 이후 한정 수량의 재고를 최종적으로 확인하여 구매를 진행할 수 있습니다
 
 ### 대용량 데이터 처리 및 트래픽 대응
-- 데이터베이스 설계: 경기 일정, 결과, 사용자 댓글 등의 대용량 데이터를 효율적으로 처리하기 위해 최적화된 데이터베이스 설계를 적용합니다.
-- 최적화 전략: 데이터베이스 쿼리 최적화, 캐싱 전략, 데이터 파티셔닝을 통해 빠른 데이터 처리 속도를 보장합니다.
+- 300만건의 상품 데이터 처리를 수행하였습니다
+- 상품 목록 조회하는 시간을 평균 1500ms에서 50ms로 개선하였습니다.
 - 스케일링 및 로드 밸런싱: 스포츠 이벤트 중 발생하는 급격한 트래픽 증가에 대응하기 위해 확장 가능한 서버 구조를 설계하고, 로드 밸런싱 및 오토 스케일링 전략을 채택합니다.
 - 성능 테스트: nGrinder를 이용한 부하테스트 및 최적화를 통해 100~300만 건의 댓글 데이터 처리를 위한 성능을 확보합니다.
 ---
@@ -74,6 +74,5 @@ WebSocket방식 : 사용자는 각 경기에 대해 응원 댓글을 작성할 �
 경기 일정 및 결과 데이터에 대한 데이터베이스 쿼리 최적화<br>
 nGrinder를 이용한 성능 테스트 및 최적화 수행<br>
 Redis와 JPA를 사용하여 대용량 트래픽에 대한 정합성 및 동시성 처리
-
 ---
 
