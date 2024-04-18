@@ -36,7 +36,7 @@
 
 ---
 
-## 담당 기능
+## 개인 담당 기능
 
 ### 스포츠 경기 일정 및 결과 서비스
 ![일정기능](https://github.com/JungHyunMoon/EchoProject-BE/assets/120004247/f4c5f6a7-026e-4b75-a16b-568d0eff60c5)
@@ -46,6 +46,7 @@
     - 경기 결과 데이터는 Scheduler를 이용해 12분에 한 번씩 업데이트를 진행합니다.
         - Timezone 최소 단위와 RepidAPI 호출 가능 토큰 갯수를 고려해 12분으로 결정했습니다.
         - 스케줄러 서버를 **scale-out**하여 외부로 Scheduler를 구현하였습니다
+        - [Repository_Link](https://github.com/JungHyunMoon/EchoProject_Scheduler)
     - **RapidAPI 응답 json 데이터 예제 이미지**
         
         ```        
